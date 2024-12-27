@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Canvas</h1>
+    <canvas
+      style="border: 1px solid black"
+      id="canvas"
+      width="800px"
+      height="600px"
+    ></canvas>
+    <script type="module">
+      import Editor from "./js/editor.js";
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      const editor = new Editor(ctx);
+      editor.draw();
+    </script>
+  </body>
+</html>
